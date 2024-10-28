@@ -1,12 +1,19 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --theme-switch-menu-color: var(--charcoal-brown);
+  --angle-color: var(--charcoal-brown);
+  --theme-hover-color: var(--charcoal-brown);
+  --header-logo-color: var(--soft-pink);
+  --header-logo-shadow-color: var(--hot-pink);
+  --header-description-text-color: var(--charcoal-brown);
+  --heading-bg-color: var(--light-candy-pink);
+  --question-title-text-color: var(--charcoal-brown);
+  --answer-heading-text-color: var(--charcoal-brown);
+  --answer-heading-bg-color: var(--light-candy-pink);
+  --answer-main-text-color: var(--charcoal-brown);
+  --link-shadow-color: var(--light-candy-pink);
+  --footer-logo-color: var(--soft-pink);
+  --footer-logo-shadow-color: var(--hot-pink);
+  --background-color: var(--blush-white);
+  --background-image: url(../images/cover-image-light.png);
+  --rec-visibility: hidden;
 }
