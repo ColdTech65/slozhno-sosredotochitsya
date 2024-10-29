@@ -1,6 +1,6 @@
 .page.theme_dark {
   --theme-switch-menu-color: var(--hot-pink);
-  --theme-hover-color: var(--hot-pink);
+  --theme-hover-color: var( --hot-pink-transparent);
   --rec-label-color: var(--hot-pink);
   --rec-indicator-color: var(--hot-pink);
   --angle-color: var(--hot-pink);
@@ -17,4 +17,29 @@
   --footer-logo-shadow-color: var(--hot-pink);
   --background-color: var(--deep-navy);
   --background-image: url(../images/cover-image-dark.png);
+  --rec-visibility: var(--hot-pink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-switch-menu-color: var(--hot-pink);
+    --theme-hover-color: var( --hot-pink-transparent);
+    --rec-label-color: var(--hot-pink);
+    --rec-indicator-color: var(--hot-pink);
+    --angle-color: var(--hot-pink);
+    --header-logo-color: var(--vivid-purple);
+    --header-logo-shadow-color: var(--hot-pink);
+    --header-description-text-color: var(--deep-navy);
+    --heading-bg-color: var(--hot-pink);
+    --question-title-text-color: var(--hot-pink);
+    --answer-heading-text-color: var(--deep-navy);
+    --answer-heading-bg-color: var(--hot-pink);
+    --answer-main-text-color: var(--pastel-rose);
+    --link-shadow-color: var(--hot-pink);
+    --footer-logo-color: var(--vivid-purple);
+    --footer-logo-shadow-color: var(--hot-pink);
+    --background-color: var(--deep-navy);
+    --background-image: url(../images/cover-image-dark.png);
+    --rec-visibility: var(--hot-pink);
+  }
 }

@@ -1,22 +1,30 @@
 .page {
-  font-family: var(--main-font);
-  background: var(--background-image) no-repeat top center / 1024px 768px fixed,
-              var(--background-color);
+  font-family: var(--main-font), monospace;
+  background: var(--background-image) no-repeat top center / cover fixed;
+  background-color: var(--background-color);
   max-inline-size: 1024px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .header {
-  padding: 20px;
-  min-block-size: 768px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr ;
+  padding: 20px;
+  block-size: 100vh;
+  min-block-size: 768px;
+  margin-block-end: 60px;
   position: relative;
 }
 
 .header__decorated-rec::before, .header__decorated-rec::after {
   position: absolute;
   visibility: var(--rec-visibility);
+}
+
+.header__decorated-rec {
+  position: absolute;
+  display: flex;
+  right: 0;
 }
 
 .header__decorated-rec::before {
@@ -68,7 +76,11 @@
 }
 
 .header__theme-menu-button {
-  padding: 2px 12px;
+  padding: 0px 13px;
+  line-height: 18px;
+  text-align: center;
+  font-style: normal;
+  height: 23px;
   background: none;
   font-size: 18px;
   color: var(--theme-switch-menu-color);
@@ -78,7 +90,7 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--theme-hover-color);
+  border: 1px solid var(--theme-switch-menu-color);
   pointer-events: none;
 }
 
@@ -93,11 +105,11 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--theme-hover-color);
+  border-bottom: 1px solid var(--theme-switch-menu-color);
 }
 
 .header__title {
-  margin-inline-start: -2%;
+  margin-inline-start: -20px;
 }
 
 .header__stylized-text {
@@ -105,11 +117,14 @@
   text-shadow: 4px 4px 0px var(--header-logo-shadow-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
+  line-height: 98%;
 }
 
 .header__description {
   justify-self: end;
   align-self: center;
+  /*margin-block-end: 2.4rem;*/
+  line-height: 131%;
   color: var(--header-description-text-color);
   font-size: 18px;
   font-weight: 700;
@@ -128,7 +143,7 @@
 .content {
   display: grid;
   gap: clamp(50px, 1.3359rem + 7.6336vw, 80px);
-  padding-block: clamp(40px, 1.3073rem + 5.0891vw, 60px);
+  /*padding-block: clamp(40px, 1.3073rem + 5.0891vw, 60px);*/
   padding-inline: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
@@ -188,6 +203,7 @@
 .images__section {
   display: flex;
   flex-direction: column;
+  margin-block-end: 60px;
   gap: 20px;
 }
 
@@ -234,7 +250,7 @@
 
 .footer {
   min-block-size: 768px;
-  inline-size: 100%;
+  block-size: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -244,15 +260,15 @@
 .footer__title {
   text-shadow: 2px 2px 0 var(--header-logo-shadow-color);
   color: var(--header-logo-color);
-  text-shadow: 4px 4px 0px var(--header-logo-shadow-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
 }
 
-@media (width < 768px) and (width >= 375px) {
+@media (width <= 767px) {
   .header {
     padding: 10px;
-    min-block-size: 668px;
+    /*min-block-size: 668px;*/
+    min-block-size: 100vh;
   }
 
   .header__title {
@@ -265,21 +281,11 @@
   }
 
   .header__decorated-rec::before {
-    content: "REC";
     top: 10px;
     right: 38px;
-    line-height: 25px;
-    font-size: 18px;
-    color: var(--rec-label-color);
   }
   
   .header__decorated-rec::after {
-    content: "";
-    inline-size: 9px;
-    block-size: 9px;
-    border-radius: 50%;
-    box-shadow: 0 0 4px 2px var(--rec-indicator-color);
-    background-color: var(--rec-indicator-color);
     top: 18px;
     right: 19px;
   }
@@ -319,11 +325,11 @@
   }
 
   .footer {
-    min-block-size: 668px;
+   /* min-block-size: 668px;*/
   }
 }
 
-@media (width < 1024px) and (width >= 768px) {
+@media (width <= 1023px) {
   .content__section {
     grid-template-columns: 1fr 2fr;
   }
@@ -337,20 +343,19 @@
   }
 
   .header {
-    min-block-size: 1024px;
+    block-size: 1024px;
+    min-block-size: 100vh;
   }
 
   .header__theme-menu {
-    padding-top: 190px;
+    display: flex;
+    justify-content: end;
   }
 
   .header__theme-menu-list {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: end;
-    gap: 12px;
-    list-style-type: none;
+    align-items: flex-end;
   }
 }
 

@@ -1,56 +1,14 @@
 :root {
-  --main-font: "IBM Plex mono", sans-serif;
+  --main-font: "IBM Plex mono", monospace;
   --hot-pink: #FF0070;
+  --hot-pink-transparent: rgba(255, 0, 112, 0.4);
   --vivid-purple: #DB00FF;
   --deep-navy: #000028;
   --pastel-rose: #F1B2CE;
   --soft-pink: #FFC2E6;
   --charcoal-brown: #353430;
+  --charcoal-brown-transparent: rgba(50, 49, 45, 0.4);
   --light-candy-pink: #FF8DCB;
   --blush-white: #FFF1F7;
   --font-size: 18px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --theme-switch-menu-color: var(--hot-pink);
-    --theme-hover-color: var(--hot-pink);
-    --rec-label-color: var(--hot-pink);
-    --rec-indicator-color: var(--hot-pink);
-    --angle-color: var(--hot-pink);
-    --header-logo-color: var(--vivid-purple);
-    --header-logo-shadow-color: var(--hot-pink);
-    --header-description-text-color: var(--deep-navy);
-    --heading-bg-color: var(--hot-pink);
-    --question-title-text-color: var(--hot-pink);
-    --answer-heading-text-color: var(--deep-navy);
-    --answer-heading-bg-color: var(--hot-pink);
-    --answer-main-text-color: var(--pastel-rose);
-    --link-shadow-color: var(--hot-pink);
-    --footer-logo-color: var(--vivid-purple);
-    --footer-logo-shadow-color: var(--hot-pink);
-    --background-color: var(--deep-navy);
-    --background-image: url(../images/cover-image-dark.png);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --theme-switch-menu-color: var(--charcoal-brown);
-    --angle-color: var(--charcoal-brown);
-    --theme-hover-color: var(--charcoal-brown);
-    --header-logo-color: var(--soft-pink);
-    --header-logo-shadow-color: var(--hot-pink);
-    --header-description-text-color: var(--charcoal-brown);
-    --heading-bg-color: var(--light-candy-pink);
-    --question-text-color: var(--charcoal-brown);
-    --answer-heading-text-color: var(--charcoal-brown);
-    --answer-heading-bg-color: var(--light-candy-pink);
-    --answer-main-text-color: var(--charcoal-brown);
-    --link-shadow-color: var(--light-candy-pink);
-    --footer-logo-color: var(--soft-pink);
-    --footer-logo-shadow-color: var(--hot-pink);
-    --background-color: var(--blush-white);
-    --background-image: url(../images/cover-image-light.png);
-  }
 }
