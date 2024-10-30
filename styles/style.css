@@ -319,6 +319,7 @@
   }
 
   .header__description {
+    inline-size: 100%;
     margin-block-end: 0;
   }
 
@@ -349,11 +350,6 @@
   .decorated-zone::before {
     bottom: 10px;
     left: 10px;
-  }
-
-  .header__description {
-    inline-size: 100%;
-    
   }
 
   .content__section {
