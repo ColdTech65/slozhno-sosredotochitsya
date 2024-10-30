@@ -11,7 +11,7 @@
   grid-template-rows: 1fr min-content 1fr ;
   padding: 20px;
   block-size: 100vh;
-  min-block-size: 768px;
+  min-block-size: 668px;
   margin-block-end: 60px;
   position: relative;
 }
@@ -169,6 +169,8 @@
   color: var(--answer-main-text-color);
   line-height: 23.4px;
   text-align: left;
+  display: grid;
+  gap: 10px;
 }
 
 .content__block {
@@ -249,7 +251,7 @@
 }
 
 .footer {
-  min-block-size: 768px;
+  min-block-size: 668px;
   block-size: 100vh;
   display: flex;
   justify-content: center;
@@ -274,12 +276,10 @@
   }
   
   .footer {
-    block-size: 1024px;
     min-block-size: 100vh;
   }
 
   .header {
-    block-size: 1024px;
     min-block-size: 100vh;
   }
 
@@ -298,20 +298,8 @@
 @media (width <= 767px) {
   .header {
     padding: 10px;
-    block-size: 668px;
     min-block-size: 100vh;
     margin-block-end: 40px;
-  }
-
-  .header__theme-menu {
-    display: flex;
-    justify-content: end;
-  }
-
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
   }
 
   .header__title {
@@ -319,7 +307,7 @@
   }
 
   .header__stylized-text {
-    font-size: clamp(114px, 0.5625rem + 14.4531vw, 157px);
+    font-size: clamp(116px, 0.5625rem + 14.4531vw, 157px);
     line-height: 95.7px;
   }
 
@@ -360,11 +348,16 @@
 
   .images__section {
     margin-block-end: 40px;
+    gap: 10px;
   }
 
   .footer {
-    block-size: 668px;
     min-block-size: 100vh;
+  }
+
+  .footer__title {
+    font-size: clamp(116px, 0.5625rem + 14.4531vw, 157px);
+    line-height: 95.7px;
   }
 }
 
